@@ -16,16 +16,16 @@ app.use(bp.urlencoded({
   extended: true
 }))
 
-let auth = require('./authentication/auth')
-app.use(auth.session)
-app.use(auth.router)
+// let auth = require('./authentication/auth')
+// app.use(auth.session)
+// app.use(auth.router)
 // Code above is always the same ^^
 
 //routes
-var playlists = require('./routes/playlists')
+var playlist = require('./routes/playlists')
 
 
-app.use(playlists.router)
+app.use(playlist.router)
 
 
 app.use('/members/*', (req, res, next) => {
