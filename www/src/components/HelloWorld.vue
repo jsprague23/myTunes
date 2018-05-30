@@ -12,7 +12,7 @@
         <h4>Results for {{title}}:</h4>
         playlist" :handle-button-click="addMusic"></music>
         <div class="row">
-          <music :list="music" button-text="Add to
+          <music :list="music" button-text="Add to playlist" :handle-button-click="addMusic"></music>
         </div>
       </div>
       <hr>
@@ -28,6 +28,7 @@
     </div>
 
   </div>
+</div>
 </template>
 
 <script>
