@@ -10,7 +10,6 @@
 
       <div class="results">
         <h4>Results for {{title}}:</h4>
-        playlist" :handle-button-click="addMusic"></music>
         <div class="row">
           <music :list="music" button-text="Add to playlist" :handle-button-click="addMusic"></music>
         </div>
