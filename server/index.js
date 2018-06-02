@@ -23,19 +23,21 @@ app.use(bp.urlencoded({
 
 //routes
 var playlist = require('./routes/playlists')
+var song = require('./routes/songs')
 
 
 app.use(playlist.router)
+app.use(song.router)
 
 
-app.use('/members/*', (req, res, next) => {
-  if (!req.session.uid) {
-    return res.status(401).send({
-      error: 'please login to continue'
-    })
-  }
-  next()
-})
+// app.use('/members/*', (req, res, next) => {
+//   if (!req.session.uid) {
+//     return res.status(401).send({
+//       error: 'please login to continue'
+//     })
+//   }
+//   next()
+// })
 
 //Catch all
 

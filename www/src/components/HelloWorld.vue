@@ -1,41 +1,22 @@
 <template>
-  <div class="hello">
-
-    <div class="searchbar">
-      <form @submit.prevent="findMusic">
-        <input type="text" v-model="query">
-      </form>
-    </div>
-    <div class="songs-section">
-
-      <div class="results">
-        <h4>Results for {{title}}:</h4>
-        <div class="row">
-          <music :list="music" button-text="Add to playlist" :handle-button-click="addMusic"></music>
-        </div>
-      </div>
-      <hr>
-      <div class=" playlist ">
-        <div class="row ">
-          <music :list="playlist " button-text="Remove from playlist " :handle-button-click="removeSong "></music>
-        </div>
-      </div>
-    </div>
-
-    <div class="detailed-view ">
-      details here
-    </div>
-
-  </div>
-</div>
+  <div>
+    <music></music>
+    <musicResults></musicResults>
+    <userPlaylist></userPlaylist>
+  </div>  
 </template>
 
 <script>
   import music from './music.vue'
+  import musicResults from './musicResults'
+  import userPlaylist from './userplaylist'
+
   export default {
     name: 'HelloWorld',
     components: {
-      music
+      musicResults,
+      music,
+      userplaylist
     },
     data() {
       return {
